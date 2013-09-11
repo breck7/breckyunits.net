@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Use grep to search multiple files at once</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Use grep to search multiple files at once</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>grep lets you search through multiple text files at once.
+
+            </p>
+            <p>I recently removed a feature from a project and wanted to make sure I removed all references to it. With grep it was easy:
+
+            </p>
+            <blockquote>grep -r picture *</blockquote>
+
+            <p>This searched all the files in my current directory as well as all the files in each subdirectory, and printed the filename and line where the word &quot;picture&quot; appeared.
+
+            </p>
+            <p>Then I went in and changed the 2 files that needed modifying.
+
+            </p>
+            <p>Had I wanted to just search the current directory (without the subdirectories) I could have done:
+
+            </p>
+            <blockquote>grep picture <em>.</em>
+            </blockquote>
+
+            <p>This would have searched through all the files in the current directory.
+
+            </p>
+            <p>Had I wanted to search in just 1 specific file:
+
+            </p>
+            <blockquote>grep picture filename.txt</blockquote>
+
+            <p>Had I wanted to do a case insensitive search:
+
+            </p>
+            <blockquote>grep -ir picture *</blockquote>
+
+            <p>Had I wanted to exclude a directory and done a case insensitive search:
+
+            </p>
+            <blockquote>grep -ri &quot;searchstring&quot; --exclude=&quot;<em>.svn</em>&quot; *</blockquote>
+
+            <p>(grep uses regular expressions)
+
+            </p>
+            <p>Links
+
+            </p>
+            <ol>
+                <li><a href="http://en.wikipedia.org/wiki/Grep">Wikipedia grep</a>
+                </li>
+                <li><a href="http://stackoverflow.com/questions/221921/grep-exclude-include-syntax-do-not-grep-through-certain-files">Stackoverflow</a>.</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted December 22nd 2009, 12:47:33 pm</div>
+    </div>
+</body>
+
+</html>

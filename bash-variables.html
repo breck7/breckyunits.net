@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Bash variables</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Bash variables</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; "><pre><code>$ FIVE=5
+$ echo $FIVE
+5
+$ echo &quot;The number five is $FIVE&quot;</code></pre>
+            <p><strong>Variable scope</strong>
+
+            </p>
+            <p>A shell script will launch a new shell that has a fresh scope.
+
+            </p>
+            <pre><code>$ FIVE = 5
+$ vim myshellscript.sh
+#!/bin/bash
+echo $FIVE
+$ ./myshellscript.sh</code></pre>
+            <p>Blank because the executed script doesn&#39;t affect the current shell. To make something affect the current shell, use the source command.
+
+            </p>
+            <p><strong>Export command.</strong>
+
+            </p>
+            <p>Use the export command to change the scope of your variable to global for your shell.
+
+            </p>
+            <p>To make a permanent global variable, add it to your .bash_profile like so:
+
+            </p>
+            <pre><code>MY_NAME=breck; export MY_NAME</code></pre>
+            <p><strong>Accept input.</strong>
+
+            </p>
+            <p>Use the read command to accept input.
+
+            </p>
+            <pre><code>echo &quot;What is 1+1?&quot;
+read ANSWER
+echo &quot;Your answer is $ANSWER&quot;</code></pre>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li><a href="http://steve-parker.org/sh/variables1.shtml">Bash tutorial</a>
+                </li>
+                <li><a href="http://www.mcsr.olemiss.edu/unixhelp/environment/env3db.html">Another tutorial</a>.</li>
+                <li><a href="http://steve-parker.org/sh/variables2.shtml">Bash parameters</a>
+                </li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 18th 2010, 3:27:54 pm</div>
+    </div>
+</body>
+
+</html>

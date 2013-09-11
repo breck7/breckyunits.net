@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Run multiple commands at once</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Run multiple commands at once</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>Want to know how to run two or more linux commands sequentially? It&#39;s simple: use the semicolon ;.
+
+            </p>
+            <p>For instance:
+
+            </p>
+            <blockquote>
+                <p>cd;ls
+
+                </p>
+            </blockquote>
+            <p>This will change the directory to your home directory, then list the contents. You can use as many semicolons as you wish.
+
+            </p>
+            <p>Another option is to use &amp;&amp; if you only want the next command to execute if the previous command executed successfully.
+
+            </p>
+            <blockquote>
+                <p>cd ~/myfiles; cp file.txt ~/backup/ &amp;&amp; rm file.txt
+
+                </p>
+            </blockquote>
+            <p>This will only run the last command if the cp command executed successfully.
+
+            </p>
+            <p>You can swap the &amp;&amp; for || to run a command if the previous one fails.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 26th 2010, 7:22:55 pm</div>
+    </div>
+</body>
+
+</html>

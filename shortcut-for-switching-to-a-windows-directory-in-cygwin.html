@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Shortcut for switching to a Windows directory in Cygwin</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Shortcut for switching to a Windows directory in Cygwin</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>In cygwin it can be a pain to change to a Windows directory like <code>C:\Users\breck\Documents\My Dropbox</code>.
+
+            </p>
+            <p>I made a small bash script called <code>wcd</code> that makes it easier.
+
+            </p>
+            <h3>wcd</h3>
+            <pre><code>#!/bin/bash
+echo $1
+newpath=$(echo $1 | sed &#39;s|\\|/|g&#39; | sed &#39;s|:||g&#39; | sed &#39;s|^C|/cygdrive/c|&#39;)
+echo $newpath
+cd &quot;$newpath&quot; </code></pre>
+            <p>The echos are just for debugging--I&#39;m kind of new to bash scripting. Feel free to remove.
+
+            </p>
+            <p>Make this file executable and add an alias into your bash_profile:
+
+            </p>
+            <pre><code>alias wcd=&quot;source ~/wcd&quot;</code></pre>
+            <p>Now you can just type(or actually copy/paste) something like this:
+
+            </p>
+            <pre><code>wcd &quot;C:\Users\breck\Documents\My Dropbox&quot;</code></pre>
+            <p>...and that will take you to the Windows directory.
+
+            </p>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li><a href="http://gist.github.com/291822">wcd gist</a>.</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted February 1st 2010, 9:06:56 am</div>
+    </div>
+</body>
+
+</html>

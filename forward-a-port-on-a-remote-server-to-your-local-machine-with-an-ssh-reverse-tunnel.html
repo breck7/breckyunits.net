@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Forward a port on a remote server to your local machine with an SSH Reverse Tunnel</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Forward a port on a remote server to your local machine with an SSH Reverse Tunnel</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>Say you are running a web server locally and want to show it to someone else remotely.
+
+            </p>
+            <p>You have a few ways to do this:
+
+            </p>
+            <ol>
+                <li>Provide your local IP address to the person.</li>
+                <li>Setup DNS to point a domain to your local IP.</li>
+            </ol>
+            <p>But what if your local computer is behind a NAT and you don&#39;t want to configure port forwarding on your router?
+
+            </p>
+            <p>One option if you have a publicly facing server already is to create a reverse SSH tunnel with that server. This allows you to forward a port on that server to a port on your local server.
+
+            </p>
+            <p>For instance, on my Mac OS X machine I open terminal and type this command:
+
+            </p>
+            <blockquote>
+                <p>ssh -nNT -R 3333:localhost:3333 username@yourdomain.com
+
+                </p>
+            </blockquote>
+            <p>This will connect to my server (yourdomain.com), and forward traffic from port 3333 on that server to my local machine. Now I can tell someone to go to yourdomain.com:3333 and that would be the equivalent of them going to localhost:3333.
+
+            </p>
+            <p>Notes: Make sure to add a rule to your IPTables config to allow inbound traffic to port 3333.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 4th 2011, 11:29:36 am</div>
+    </div>
+</body>
+
+</html>

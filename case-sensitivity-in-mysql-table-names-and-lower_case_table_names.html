@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Case sensitivity in MySQL table names and lower_case_table_names</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Case sensitivity in MySQL table names and lower_case_table_names</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>On linux, filenames and directories are case sensitive. <code>file</code> and <code>File</code> are different files.
+
+            </p>
+            <p>On Windows, filenames are not case sensitive. <code>file</code> and <code>File</code> are the same file.
+
+            </p>
+            <p>MySQL saves a database to disk. A &quot;database&quot; is saved in a directory, and each table is saved as a file in that folder.
+
+            </p>
+            <p>Thus, say you transfer a database from Linux to Windows that has a table named &quot;userBookmarks&quot;, this might cause a problem for you because MySQL on Windows will likely interpret it as &quot;userbookmarks&quot;.
+
+            </p>
+            <p>There&#39;s a setting in your my.cnf file called &quot;lower_case_table_names&quot;.
+
+            </p>
+            <p>The options are 0, 1, and 2.
+
+            </p>
+            <p>1 is the default, and you shouldn&#39;t need to change it.
+
+            </p>
+            <p>If you change it to 0 on Windows, you might run into problems. If you change it to 2, it doesn&#39;t seem to do much.
+
+            </p>
+            <p>So what&#39;s the solution? Try to avoid capital letters in table names (use _ instead of camel case). When you can&#39;t do that, write your code for the Linux database (ie &quot;select <em> from userBookmarks&quot;), and your queries should translate fine on Windows since Windows will convert that to &quot;select </em> from
+                userbookmarks&quot;.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted March 27th 2010, 2:37:52 pm</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'ProximaNovaRgRegular';
+  src: url('/nudge/fonts/ProximaNova-Reg-webfont.eot');
+  src: url('/nudge/fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/nudge/fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+       url('/nudge/fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+       url('/nudge/fonts/ProximaNova-Reg-webfont.svg#ProximaNovaRgRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNovaRgRegular';
+  src: url('/nudge/fonts/ProximaNova-Bold-webfont.eot');
+  src: url('/nudge/fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/nudge/fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+       url('/nudge/fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+       url('/nudge/fonts/ProximaNova-Bold-webfont.svg#ProximaNovaRgRegular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arial';
+}
+
+.block {
+  position: absolute;
+}
+
+a { text-decoration: none; color : rgb(61,0,242); }
+
+.block {position: absolute;}
+
+ #container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  }
+
+blockquote {
+  border: 1px dashed #548DD4;
+  background: #f9f9f9;
+  font-family:  monospace, sans-serif;
+  padding: 0px 10px;
+  margin: 10px;
+  }
+
+blockquote p {
+  white-space: pre;
+  margin-bottom: 0px;
+}

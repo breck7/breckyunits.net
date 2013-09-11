@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">cron in 2 steps</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">cron in 2 steps</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>cron lets you schedule linux commands to execute on a regular basis.
+
+            </p>
+            <p>For instance, say we want to run the command &quot;wget <a href="http://yourdomain.com/backup.zip">http://yourdomain.com/backup.zip</a>&quot; each hour, that downloads a backup of one of your websites.
+
+            </p>
+            <p><b>Step 1: Write the cron command</b>
+
+            </p>
+            <p>Here is the cron command you would need:
+
+            </p>
+            <pre> 0    *    *    *    *    wget http://yourdomain.com/backup.zip</pre>
+
+            <p>You can either memorize the <a href="http://en.wikipedia.org/wiki/Cron#crontab_syntax">crontab syntax</a>, or just this simple Javascript <a href="http://www.openjs.com/scripts/jslibrary/demos/crontab.php">crontab gui</a> will easily generate
+                the code for you.
+
+            </p>
+            <p><b>Step 2: Append the command to your crontab file</b>
+
+            </p>
+            <p>There are 2 crontab files that get executed every minute. 1 of them is found in /etc or similar and is controlled by root only. In addition, each user can have a crontab.
+
+            </p>
+            <p>To add your command to crontab type:
+
+            </p>
+            <blockquote>crontab -e</blockquote>
+
+            <p>This will open vim, and you can then paste and save your crontab file.
+
+            </p>
+            <p>Viola!
+
+            </p>
+            <p>Notes: 1. If you are using cron in cygwin, follow <a href="http://www.newmedialogic.com/node/33">these steps</a> after installing the cron package with the cygwin installer to install cron as a service:
+
+            </p>
+            <blockquote>cygrunsrv -I cron -p /usr/sbin/cron -a D net start cron</blockquote>
+
+            <p>If there are problems, check the cron.log file in your home directory.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted December 25th 2009, 10:03:30 am</div>
+    </div>
+</body>
+
+</html>

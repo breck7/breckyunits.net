@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Use aliases to save time</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Use aliases to save time</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>Using aliases in Linux can save you a lot of time. Here&#39;s an example:
+
+            </p>
+            <blockquote>alias www=&#39;cd /var/www/html/&#39;</blockquote>
+
+            <p>Instead of typing &quot;cd /var/www/html/&quot; to enter your web directory, now you can enter &quot;www&quot;, a savings of at least 14 keystrokes each time you use it.
+
+            </p>
+            <p>This one will switch to the usr/sbin directory, restart apache, then switch to your home directory:
+
+            </p>
+            <blockquote>alias apr=&#39;cd /usr/sbin/;sudo ./apachectl restart;cd&#39;</blockquote>
+
+            <p>You can also just do:
+
+            </p>
+            <blockquote>alias apr=&#39;/usr/sbin/apachectl restart&#39;</blockquote>
+
+            <p>But the earlier example shows how you can string multiple commands together.
+
+            </p>
+            <p><b>Bonus tip</b>
+
+            </p>
+            <p>Place these aliases in your HOME/.bash_profile file and they will be available each time you login to your machine.
+
+
+            </p>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li>&quot;At least&quot; 14 keystrokes, because the # of typos increases as the # of characters typed increases.</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted December 28th 2009, 2:35:53 pm</div>
+    </div>
+</body>
+
+</html>

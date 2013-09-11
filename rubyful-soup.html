@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Rubyful Soup</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Rubyful Soup</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>I was a big fan of BeautifulSoup in Python and was excited to see a Ruby port(<a href="http://www.crummy.com/software/RubyfulSoup/">http://www.crummy.com/software/RubyfulSoup/</a>).
+
+            </p>
+            <p>Sadly it&#39;s no longer being maintained.
+
+            </p>
+            <p>To get v1.0.4 working with Ruby 1.9.2, I had to make the following changes to the rubyful_soup.rb file in my gems directory:
+
+            </p>
+            <p>Line 19 - comment out &#39;require &#39;jcode&#39;&#39;
+
+            </p>
+            <p>Line 233 - remove the colon</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 14th 2010, 6:15:47 pm</div>
+    </div>
+</body>
+
+</html>

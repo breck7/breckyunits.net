@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Cygwin Error: Could not resolve hostname X: Non-recoverable failure in name resolution</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Cygwin Error: Could not resolve hostname X: Non-recoverable failure in name resolution</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>I&#39;ve been getting this error a lot in Cygwin on Windows 7:
+
+            </p>
+            <blockquote>
+                <p>Could not resolve hostname X: Non-recoverable failure in name resolution
+
+                </p>
+            </blockquote>
+            <p>It happens a lot when I run a deploy script or git push. Haven&#39;t found a solution yet, and am trying to track one down.
+
+            </p>
+            <p>The problem is this bug is hard to reproduce. It happens only 5-10% of the time.
+
+            </p>
+            <p>Edit #1:
+                <a href="http://technet.microsoft.com/en-us/library/bb727005.aspx">Helpful article from Microsoft on Host Name Resolution</a>
+
+            </p>
+            <p>Edit #2: Upon closer examination, it seems this error only happens with ssh:
+
+            </p>
+            <blockquote>
+                <p>ssh: Could not resolve hostname X: Non-recoverable failure in name resolution
+
+                </p>
+            </blockquote>
+            <p>That&#39;s narrowed it down a bit but still no solution. Sadly because it only happens once or twice out of 10-20 times I run the &quot;ssh&quot; command, it&#39;s taking longer to pin down.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted March 21st 2010, 11:55:10 pm</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">More tips on using rsync to deploy your website</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">More tips on using rsync to deploy your website</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>My post on <a href="http://breckyunits.com/code/use_rsync_to_deploy_your_website">deploying a website using rsync</a> has gotten quite a few hits.
+
+            </p>
+            <p>I thought I&#39;d add some more tips:
+
+            </p>
+            <p>Use the &quot;--delete&quot; option if you want to delete files on the destination directory that no longer exist in the source directory.
+
+            </p>
+            <p>Add &quot;$1&quot; after your options like this:
+
+            </p>
+            <pre><code>rsync -rvz$1</code></pre>
+            <p>Then you can easily do a DRY RUN. Just type:
+
+            </p>
+            <pre><code>./deploy.sh n</code></pre>
+            <p>The n will get substituted for $1.
+
+            </p>
+            <h3>Troubleshooting</h3>
+            <p>I&#39;ve found a lot of times rsync appears to be copying the same files over and over.
+
+            </p>
+            <p>There are a few things you can do to troubleshoot <a href="http://samba.anu.edu.au/rsync/FAQ.html">when rsync recopies the same files</a>.
+
+            </p>
+            <p>The options that I&#39;ve found come in real handy are:
+
+            </p>
+            <ol>
+                <li>The <b>i</b> option, which shows you why a file is being copied (all pluses means rsync thinks it doesn&#39;t exist in the destination; t means the times differ; s means the contents differ (?)).</li>
+                <li>The <b>--modify-window=1</b> option. This lets you ignore differences in modified timestamps. You can set 1 to a high number to ignore large differences.</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted March 3rd 2010, 6:59:33 pm</div>
+    </div>
+</body>
+
+</html>

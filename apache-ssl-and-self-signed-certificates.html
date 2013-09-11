@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Apache, SSL and self signed certificates</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Apache, SSL and self signed certificates</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>Just read an excellent guide about <a href="http://www.akadia.com/services/ssh_test_certificate.html">how to create self-signed certificates.</a>
+
+            </p>
+            <p>Here&#39;s what it boils down to:
+            </p>
+            <textarea style="width: 100%; height: 400px;" readonly>
+                # The cool thing about SSL is it&#39;s just 2 text files. A public key and a private key. # They have a &quot;pem&quot; and a &quot;crt&quot; extension, but they are just plain text. Neat. # Okay, first step is to create a private key &quot;pem&quot;
+                file. # every time you run this the random output pem file will be different: openssl genrsa -des3 -out private_key.pem 1024 # (enter passphrase) # Next, generate a &quot;signing request&quot;. openssl req -new -key private_key.pem -out
+                private_key_certificate_signing_request.csr # (for common name enter the full domain name: # (the extra options aren&#39;t necessary--just hit enter) # Next remove the password from the private_key. Otherwise you&#39;d have to enter #
+                that password at all sorts of inconvenient times.....be careful because # if someone gets this unencrypted ket, you&#39;ll need to get a new cert..so make your pem readable # only by root! cp private_key.pem private_key.pem.original openssl
+                rsa -in private_key.pem.original -out private_key.pem # now you can generate your public self signed certificate: openssl x509 -req -days 365 -in private_key_certificate_signing_request.csr -signkey private_key.pem -out self_signed_public_certificate.crt
+                # now copy the private key (pem file) and the public key ( crt file ) to your web server. mkdir /etc/httpd/certs cp self_signed_public_certificate.cert /etc/httpd/certs cp private_key.pem /etc/httpd/certs # you can delete the CRT file.
+                you don&#39;t need that crap anymore. you got the cert/public key and the pem/private key. thats all you need rm private_key_certificate_signing_request.csr # if you don&#39;t have mod_ssl installed you need to install it. on fedora: yum
+                install mod_ssl #now edit the apache config to let apache with mod_ssl know where the keys are: SSLEngine on SSLCertificateFile /etc/httpd/certs/self_signed_public_certificate.crt SSLCertificateKeyFile /etc/httpd/certs/private_key.pem
+            </textarea>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 14th 2011, 10:27:59 am</div>
+    </div>
+</body>
+
+</html>

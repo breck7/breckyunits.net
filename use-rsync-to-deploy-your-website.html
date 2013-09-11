@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Use rsync to deploy your website</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Use rsync to deploy your website</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>rsync is a nifty little tool that can deploy a website to a testing or production server.
+
+            </p>
+            <p>Here&#39;s a one line command to deploy brecksblog:
+
+            </p>
+            <blockquote>
+                <p>rsync -arvuz /home/user/brecksblog breck32@breckyunits.com:/var/www/html/ --exclude &#39;.git&#39; --exclude &#39;deploy&#39; --exclude &#39;README&#39; --exclude &#39;posts.php&#39;
+
+                </p>
+            </blockquote>
+            <p>This one line will do a fast, incremental file transfer from my local directory to the web server.
+
+            </p>
+            <p>I saved this file as &quot;deploy&quot;, and then run it by typing:
+
+            </p>
+            <blockquote>
+                <p>./deploy
+
+                </p>
+            </blockquote>
+            <p>The exclude option will exclude a file or directory from being synced.
+
+            </p>
+            <p>Here&#39;s an <a href="http://ubuntuforums.org/showthread.php?t=251516">explanation</a> about the options I use:
+
+            </p>
+            <p>I use rsync with these options:
+
+            </p>
+            <blockquote>
+                <p>rsync -arvuz /src/foo/ /dest/foo
+
+                </p>
+            </blockquote>
+            <p>this will copy the contents of /src/foo/ into /dest/foo
+
+            </p>
+            <p>options explained:
+
+            </p>
+            <ul>
+                <li>a: archive mode (keep owner and permissions)</li>
+                <li>r: recurse into directories</li>
+                <li>v: increase verbosity</li>
+                <li>u: update only (don&#39;t overwrite newer files - if you have edited files in destination)</li>
+                <li>z: compress file data</li>
+            </ul>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li>If you are using a different port for SSH, say 333 do this: --rsh=&quot;ssh -p333&quot;</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted December 21st 2009, 1:36:49 pm</div>
+    </div>
+</body>
+
+</html>

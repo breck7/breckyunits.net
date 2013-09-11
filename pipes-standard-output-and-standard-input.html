@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Pipes, standard output and standard input</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Pipes, standard output and standard input</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>In linux, standard input refers to the stream of bits that come from your keyboard.
+
+            </p>
+            <p>Standard output refers to the stream of bits that appear on your screen(terminal).
+
+            </p>
+            <p>You can change this around so that standard input comes from another source(say, a file) or so that standard output gets directed somewhere else (say, a file).
+
+            </p>
+            <p>For example, say we wanted to email someone a file containing the contents of our home directory. We could do this:
+
+            </p>
+            <pre><code>ls ~ | vim -</code></pre>
+            <p>This will pipe the output from the ls command to vim. You can then edit and save this file normally as you would in vim.
+
+            </p>
+            <p>There&#39;s another type of pipe you could use for this example: greater than.
+
+            </p>
+            <pre><code>ls ~ &gt; contents.txt</code></pre>
+            <p>This will redirect the output to the contents.txt file.
+
+            </p>
+            <p>You can also append output by using two greater than signs:
+
+            </p>
+            <pre><code>ls ~ &gt;&gt; some_file.txt</code></pre>
+            <p>As you would expect, the less than sign can be used to direct a file as standard in.
+
+
+            </p>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li><a href="http://www.amazon.com/gp/product/0672328380?ie=UTF8&tag=smartyounginv-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0672328380">Linux Phrasebook</a>
+                    <img src="http://www.assoc-amazon.com/e/ir?t=smartyounginv-20&l=as2&o=1&a=0672328380"
+                    width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                </li>
+                <li><a href="http://ubuntuforums.org/showthread.php?t=713210">pipe to vim</a>.</li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 26th 2010, 7:37:19 pm</div>
+    </div>
+</body>
+
+</html>

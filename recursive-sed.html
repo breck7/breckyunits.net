@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Recursive Sed</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Recursive Sed</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>As far as I can tell, sed doesn&#39;t have a recursive mode. Here&#39;s a little script that uses perl to simulate a recursive sed:
+
+            </p>
+            <pre><code>#!/bin/bash
+perl -e &quot;s/$1/$2/g;&quot; -pi $(find . -type f)</code></pre>
+            <p>I put this in a file named ~/rsed
+
+            </p>
+            <p>Then in my .bash_profile:
+
+            </p>
+            <pre><code>alias rsed=&quot;~/rsed&quot;</code></pre>
+            <p>Now I can use it like so:
+
+            </p>
+            <pre><code>rsed old new</code></pre>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 5th 2011, 1:46:36 pm</div>
+    </div>
+</body>
+
+</html>

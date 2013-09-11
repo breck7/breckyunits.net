@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">Finder Address Bar in Mac OS X</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">Finder Address Bar in Mac OS X</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>One thing that I never liked about Finder is that there is no address bar.
+
+            </p>
+            <p>I don&#39;t know why the person at Apple chose not to reveal it, since at its core the address is how finder works, Windows uses it, and web browsers use it.
+
+            </p>
+            <p>Anyway, found this <a href="http://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder">awesome answer</a> on StackOverflow today.
+
+            </p>
+            <p>To go to a folder in finder via typing an address:
+
+            </p>
+            <pre><code>command+shift+g</code></pre>
+            <p>To show the full path in finder run this on terminal:
+
+            </p>
+            <pre><code>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES &amp;&amp; killall Finder</code></pre>
+            <p>P.S. Yes I know that links goes to superuser, but it&#39;s basically stackoverflow.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted May 15th 2013, 9:48:43 am</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">A Pretty Picture</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">A Pretty Picture</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>
+                <img src="ca.png">```
+            </p>
+            <p>
+                <style>
+                    body {
+                    margin: 0px;
+                        padding: 0px;
+                        text-align:right;
+                    }
+                    div {
+                        height: 1px;
+                        width:1px;
+                        display:inline-block;
+                    }
+                </style>
+            </p>
+            <p>
+                <table cellpadding=0 cellspacing=0>
+                    &lt;?php // <a href="http://php.net/manual/ja/function.base-convert.php">http://php.net/manual/ja/function.base-convert.php</a>
+                    function unfucked_base_convert ($numstring, $frombase, $tobase) {
+
+            </p>
+            <p>$chars = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;; $tostring = substr($chars, 0, $tobase);
+
+            </p>
+            <p>$length = strlen($numstring); $result = &#39;&#39;; for ($i = 0; $i &lt; $length; $i++) { $number[$i] = strpos($chars, $numstring{$i}); } do { $divide = 0; $newlen = 0; for ($i = 0; $i &lt; $length; $i++) { $divide = $divide * $frombase +
+                $number[$i]; if ($divide &gt;= $tobase) { $number[$newlen++] = (int)($divide / $tobase); $divide = $divide % $tobase; } elseif ($newlen &gt; 0) { $number[$newlen++] = 0; } } $length = $newlen; $result = $tostring{$divide} . $result; }
+                while ($newlen != 0); return $result; }
+
+            </p>
+            <p>function print_ca($number) {
+
+            </p>
+            <pre><code>$digits = str_split(unfucked_base_convert($number,10,2));
+
+foreach ($digits as $digit)
+{
+    ?&gt;&lt;div style=&quot;background:#&lt;?=($digit ?&quot;000&quot;:&quot;fff&quot;)?&gt;;&quot;&gt;&lt;/div&gt;&lt;?php
+}
+echo &quot;&lt;div style=&#39;background:red;&#39; title=&#39;$number&#39;&gt;&lt;/div&gt;&lt;br&gt;&quot;;</code></pre>
+            <p>}
+
+            </p>
+            <p>for ($x = 1; $x &lt; 300; $x++) { $str = &quot;1&quot;; $z = $x; while ($z) { $str .= &quot;0&quot;; $z--; } print_ca($str); } ```
+            </p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 4th 2010, 8:26:36 pm</div>
+    </div>
+</body>
+
+</html>

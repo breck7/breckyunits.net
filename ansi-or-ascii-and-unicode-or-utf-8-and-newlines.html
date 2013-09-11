@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">ANSI or ASCII and Unicode or UTF-8 and Newlines</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">ANSI or ASCII and Unicode or UTF-8 and Newlines</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>The key things you need to know:
+
+            </p>
+            <p>ANSI (aka ASCII) and UTF-8 (aka &quot;UnicodeTransformation Format&quot; or just &quot;Unicode&quot;) are ways to encode text files into binary data.
+
+            </p>
+            <p>I&#39;m simplifying things but actually what I&#39;m leaving out is not important. There are basically 2 character sets: ASCII or ANSI and UTF8 or Unicode. It&#39;s probably easiest to just call them ASCII and Unicode.
+
+            </p>
+            <p>Unicode is the new guy, and is slowly replacing ASCII.
+
+            </p>
+            <p>The main problem you&#39;ll run into with ASCII is line breaks. This isn&#39;t really an ASCII issue, it&#39;s a Windows issue but it often seems like it&#39;s an ASCII issue.
+
+            </p>
+            <p>Windows does \r\n, whereas Unicode just does \n.
+
+            </p>
+            <p>Here&#39;s an experiment you can do using Notepad++ and Notepad.
+
+            </p>
+            <p>Open Notepad++ and start a new document.
+
+            </p>
+            <p>Type in:
+
+            </p>
+            <pre><code>hello
+world</code></pre>
+            <p>Click &quot;Edit&quot;, &quot;EOL Completion&quot; and click &quot;Windows Format&quot; (if it&#39;s gray, that means it&#39;s already on Windows format). Now cut and paste the text into Notepad. You&#39;ll see that it comes out on 2 lines.
+                All good right?
+
+            </p>
+            <p>Now go back to Notepad++ and click &quot;Edit&quot;, &quot;EOL Completion&quot; and click &quot;UNIX Format&quot;. Now cut and paste the text into Notepad. It&#39;s on 1 line, right?
+
+            </p>
+            <p>Tada!
+
+            </p>
+            <p>Now when you&#39;re having line problems just use this nifty feature in Notepad++.
+
+            </p>
+            <p>Notes
+
+            </p>
+            <ol>
+                <li>Okay so this article turned out to be about line breaks and not about character encoding. I blame ADD.</li>
+                <li>
+                    <A href="http://vlaurie.com/computers2/Articles/characters.htm">Cast of Characters- ASCII, ANSI, UTF-8 and all that</a>
+                </li>
+                <li><a href="http://www.rapidintellect.com/AEQweb/mansub1.htm">ANSI versus Unicode</a>
+                </li>
+            </ol>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted March 25th 2010, 1:11:11 pm</div>
+    </div>
+</body>
+
+</html>

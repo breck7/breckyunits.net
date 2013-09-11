@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">The only 5 git commands you need to know</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">The only 5 git commands you need to know</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>What&#39;s the difference between a great programmer who acts cool around girls and a great programmer who does not use version control?
+
+            </p>
+            <p>Nothing--they both don&#39;t exist!
+
+            </p>
+            <p>If <em>every single great programmer</em> uses version control, why do some beginning programmers avoid it?
+
+            </p>
+            <p>Because version control is made to seem intimidating.
+
+            </p>
+            <p>But version control is actually very easy!
+
+            </p>
+            <p>If you are new to version control, there are only 5 commands you need to memorize. Can you memorize 5 words? Of course you can.
+
+            </p>
+            <p>So memorize these 5 words and you&#39;ll be practically an expert at version control:
+
+            </p>
+            <pre><code>init
+
+add
+
+status
+
+commit
+
+push</code></pre>
+            <p>If you just start playing around with these 5 and only these 5 commands, you&#39;ll become a git master in no time.
+
+            </p>
+            <p>Here&#39;s a simple practice session you can follow to start getting good.
+
+            </p>
+            <h3>What is git?</h3>
+            <p>Git is a simple command line program like &quot;wget&quot; or &quot;vim&quot; that you install and use by typing commands. If you don&#39;t have git installed, try one of these commands:
+
+            </p>
+            <blockquote>
+                <p>yum install git-core
+
+                </p>
+                <p>apt-get install git-core
+
+                </p>
+                <p>sudo port install git-core
+
+                </p>
+            </blockquote>
+            <p>Let&#39;s say you&#39;re creating a new website for your mom and want to use version control to do it.
+
+            </p>
+            <blockquote>
+                <p>mkdir moms_website
+
+                </p>
+                <p>cd moms_website
+
+                </p>
+                <p>git init
+
+                </p>
+            </blockquote>
+            <p>This creates a git repository. Now type:
+
+            </p>
+            <blockquote>
+                <p>ls -a
+
+                </p>
+            </blockquote>
+            <p>Do you see the new &quot;.git&quot; directory? That&#39;s the git repository. It&#39;s basically a folder that stores the whole history of your project. Now, when you type a git command, it will do something with the files in that folder.
+                That&#39;s all that&#39;s really going on. You never need to go into that folder manually, I was just explaining what git is doing.
+
+            </p>
+            <p>Now, let&#39;s create a file and add it to your repository.
+
+            </p>
+            <blockquote>
+                <p>vim index.php
+
+                </p>
+                <p>Hello World
+
+                </p>
+                <p>:wq
+
+                </p>
+                <p>git status
+
+                </p>
+            </blockquote>
+            <p>This will show the presence of an untracked file, &quot;index.php&quot;. Let&#39;s add this file.
+
+            </p>
+            <blockquote>
+                <p>git add index.php
+
+                </p>
+            </blockquote>
+            <p>You&#39;ve now added the file to git, let&#39;s <em>commit</em> our changes.
+
+            </p>
+            <blockquote>
+                <p>git commit -m &quot;first commit&quot;
+
+                </p>
+            </blockquote>
+            <p>Now you&#39;ve made your first commit.
+
+            </p>
+            <p>The last command you&#39;ll need is <em>push</em>. It works like this:
+
+            </p>
+            <blockquote>
+                <p>git push
+
+                </p>
+            </blockquote>
+            <p>That will upload your repository to an online host like github so that other people can collaborate.
+
+            </p>
+            <p>Create a github account and follow the instructions for creating a new repository to test out this final command.
+
+            </p>
+            <p>That&#39;s it! Those are the 5 commands you&#39;ll use over and over again. Master those and slowly you&#39;ll start learning a few other helpful git commands.
+
+            </p>
+            <h4>Recap</h4>
+            <blockquote>
+                <p>git init
+
+                </p>
+                <p>git status
+
+                </p>
+                <p>git add <em>filename</em>
+
+                </p>
+                <p>git commit -m <em>&quot;your message about what you changed and why&quot;</em>
+
+                </p>
+                <p>git push</p>
+            </blockquote>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 23rd 2010, 8:46:02 am</div>
+    </div>
+</body>
+
+</html>

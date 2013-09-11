@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">List only directories using ls</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">List only directories using ls</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>the &quot;ls&quot; command lists all files and directories. What if you just wanted to list the directories?
+
+            </p>
+            <pre><code>ls -l | egrep &#39;^d&#39;</code></pre>
+            <p>Add this to your .bash_profile and now you can just type &quot;lsd&quot; when you want list only directories. Who said lsd was a bad thing?
+
+            </p>
+            <pre><code>alias lsd=&quot;ls -l | egrep &#39;^d&#39;&quot;</code></pre>
+            <p>Notes 1. Found this <a href="http://www.cyberciti.biz/faq/linux-list-just-directories-or-directory-names/">tip here</a>.</p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted January 13th 2010, 8:46:24 am</div>
+    </div>
+</body>
+
+</html>

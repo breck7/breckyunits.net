@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">nohup and disown</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">nohup and disown</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p>Just read a good guide on how to keep commands running when you exit ssh:
+
+            </p>
+            <p><a href="http://playingwithsid.blogspot.com/2007/10/disown-nohup-bash-commands.html">Disown, nohup : Bash Commands</a>.
+
+            </p>
+            <p>Basically:
+
+            </p>
+            <pre><code>nohup ./mycommand &amp;</code></pre>
+            <p>Adding the ampersand to the end of a command in Nix executes the command in the background and gives you back your shell. However, if you quit your terminal the process will be killed. The nohup command takes care of that.
+
+            </p>
+            <p>What is nohup? It&#39;s another obfuscated Nix low level utility that is an abbreviation for &quot;No Hangup Signal&quot;, in other words: if the terminal sends a hangup signal, normally that kills all running processes, but this says ignore
+                that.
+
+            </p>
+            <p><a href="http://en.wikipedia.org/wiki/Nohup">More on nohup.</a>
+            </p>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 22nd 2011, 4:03:26 pm</div>
+    </div>
+</body>
+
+</html>

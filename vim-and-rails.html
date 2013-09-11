@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head id="head">
+    <title id="title">VIM and Rails</title>
+    <link id="stylesheet" rel="stylesheet" href="project.css"></link>
+    <script id="googleAnalytics" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-91373-12']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body id="body">
+    <div id="container" style="width: 90%; max-width: 800px; height: 100%; margin: 0 auto; "><a id="block1" href="/" style="height: auto; font-family: Open Sans; width: auto; font-size: 12px; font-weight: normal; color: #333; font-style: normal; padding: 10px; display: block; ">Home</a>
+        <div id="block12" style="height: auto; font-family: Open Sans; width: auto; font-size: 24px; font-weight: bold; color: #333; text-decoration: none; font-style: normal; padding: 10px; ">VIM and Rails</div>
+        <div id="block14" content_format="markdown" style="height: auto; font-family: Open Sans; width: auto; font-size: 18px; font-weight: normal; color: #333; text-decoration: none; font-style: normal; padding: 0 10px; ">
+            <p><a href="http://biodegradablegeek.com/2007/12/using-vim-as-a-complete-ruby-on-rails-ide/">Check out this guide.</a>
+
+            </p>
+            <pre><code>filetype on  &quot; Automatically detect file types.
+set nocompatible  &quot; We don&#39;t want vi compatibility.
+
+&quot; Add recently accessed projects menu (project plugin)
+set viminfo^=!
+
+&quot; Minibuffer Explorer Settings
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+&quot; alt+n or alt+p to navigate between entries in QuickFix
+map &lt;silent&gt; &lt;m-p&gt; :cp &lt;cr&gt;
+map &lt;silent&gt; &lt;m-n&gt; :cn &lt;cr&gt;
+
+&quot; Change which file opens after executing :Rails command
+let g:rails_default_file=&#39;config/database.yml&#39;
+
+syntax enable
+
+set ruler  &quot; Ruler on
+set nu  &quot; Line numbers on
+set ruler  &quot; Ruler on
+set nu  &quot; Line numbers on
+set nowrap  &quot; Line wrapping offset nowrap  &quot; Line wrapping off
+
+set timeoutlen=250  &quot; Time to wait after ESC (default causes an annoying
+set ts=2  &quot; Tabs are 2 spaces
+
+set laststatus=2  &quot; Always show status line.</code></pre>
+        </div>
+        <div id="howlongago" style="height: auto; font-family: Open Sans; width: auto; font-size: 16px; font-weight: normal; color: #8d8d8d; text-decoration: none; font-style: normal; padding: 10px; ">Posted September 13th 2010, 10:37:33 am</div>
+    </div>
+</body>
+
+</html>
